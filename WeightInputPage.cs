@@ -29,7 +29,9 @@ namespace HealthTracker
 
         private void weightReturnToMenu_Click(object sender, EventArgs e)
         {
-
+            HealthApp healthApp = new HealthApp();
+            healthApp.Show();
+            this.Hide();
         }
     }
 }

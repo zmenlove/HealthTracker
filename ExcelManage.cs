@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,9 +16,15 @@ namespace HealthTracker
 
         public ExcelManage()
         {
+            //Setting license version as requirement for it to work
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
             //determines the relative path to the folder so that it can be used on any computer
-            string dataFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
-            filePath = Path.Combine(dataFolder, "HealthData.xlxs");
+            dataFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
+            filePath = Path.Combine(dataFolder, "HealthData.xlsx");
+
+            //verifies folder is available
+            ensureDataFileAndFolder();
         }
 
         private void ensureDataFileAndFolder()
@@ -28,9 +35,9 @@ namespace HealthTracker
                 Directory.CreateDirectory(dataFolder);
             }
             //check to see if file exists in folder
-            if (!Directory.Exists(filePath))
+            if (!File.Exists(filePath))
             {
-                Directory.CreateDirectory(filePath);
+                createExcelFile();
             }
         }
         private void createExcelFile()
@@ -64,6 +71,28 @@ namespace HealthTracker
                     worksheet.Cells[row, i +1].Value = data[i];
                 }
                 package.Save();
+            }
+        }
+        public void OpenExcelFile()
+        {
+            if(File.Exists(filePath))
+            {
+                try
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = filePath,
+                        UseShellExecute = true //open the file using the default program for an excel filetype
+                    });
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Failed to open Excel file: {ex.Message}");
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException("This excel file does not exist.");
             }
         }
     }

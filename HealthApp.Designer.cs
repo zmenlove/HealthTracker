@@ -94,6 +94,7 @@
             this.caloriesGoTo.TabIndex = 6;
             this.caloriesGoTo.Text = "Track Calories";
             this.caloriesGoTo.UseVisualStyleBackColor = true;
+            this.caloriesGoTo.Click += new System.EventHandler(this.caloriesGoTo_Click);
             // 
             // exerciseGoTo
             // 
@@ -104,6 +105,7 @@
             this.exerciseGoTo.TabIndex = 7;
             this.exerciseGoTo.Text = "Track Exercise";
             this.exerciseGoTo.UseVisualStyleBackColor = true;
+            this.exerciseGoTo.Click += new System.EventHandler(this.exerciseGoTo_Click);
             // 
             // weightGoTo
             // 
@@ -114,6 +116,7 @@
             this.weightGoTo.TabIndex = 8;
             this.weightGoTo.Text = "Track Weight";
             this.weightGoTo.UseVisualStyleBackColor = true;
+            this.weightGoTo.Click += new System.EventHandler(this.weightGoTo_Click);
             // 
             // resultsGoTo
             // 
@@ -124,6 +127,7 @@
             this.resultsGoTo.TabIndex = 9;
             this.resultsGoTo.Text = "See Results";
             this.resultsGoTo.UseVisualStyleBackColor = true;
+            this.resultsGoTo.Click += new System.EventHandler(this.resultsGoTo_Click);
             // 
             // pictureBox4
             // 
@@ -134,7 +138,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // HealthApp
             // 

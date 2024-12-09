@@ -51,6 +51,7 @@
             this.calorieReturnToMenu.TabIndex = 13;
             this.calorieReturnToMenu.Text = "Menu";
             this.calorieReturnToMenu.UseVisualStyleBackColor = true;
+            this.calorieReturnToMenu.Click += new System.EventHandler(this.calorieReturnToMenu_Click);
             // 
             // pictureBox1
             // 

@@ -31,5 +31,12 @@ namespace HealthTracker
         {
 
         }
+
+        private void calorieReturnToMenu_Click(object sender, EventArgs e)
+        {
+            HealthApp healthApp = new HealthApp();
+            healthApp.Show();
+            this.Hide();
+        }
     }
 }
