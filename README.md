@@ -44,17 +44,25 @@ The application stores data in an excel file which can be opened for easy review
 
 ---
 
-## Installation
-1. **Find the Installation Folder**
-Navigate to the Release portion of the Git Page
+## Installation of Code through Visual Studio (Please navigate to release version if you would like to install an .exe file without use of an IDE.)
+1. **Clone Repository**
+  - Click on <> Code.
+  - Copy the HTTPS web url link.
 
-1. **Download the ZIP File**:
-- Download the HealthTrackerApplication.zip file from the release folder.
+2. **Open Visual Studio 2022**:
+  - Under "Get Started" click "Clone a repository".
+  - Paste the web url link obtained from GitHub.
+  - Adjust installation path if desired.
+  - Click "Clone".
 
-2. **Run the Application**:
-- Double click the exe file to install and launch the application.
+3. **Run the Application**:
+  - Wait while the repository is installed on your device.
+  - Right click the solution and click "Restore NuGet Packages".
+  - Open Solution
+  - Click "Run without debugging" to run code (If a debugging enviroment is desired then user will need to rebuild in debug configuration).
 
 ## Usage
+### Main Application Page
 - From main menu select one of the following options.
   - Track Calories.
   - Track Exercise.
@@ -79,6 +87,8 @@ Navigate to the Release portion of the Git Page
 
 ### See Results
 - Selecting this option will close the application and open your excel file.
+- First time use will cause the excel file to be created in the data file of the project.
+- Subsuquent uses will open the already created file showing existing data
 
 ---
 
