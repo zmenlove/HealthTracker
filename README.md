@@ -53,10 +53,10 @@ The application stores data in an excel file which can be opened for easy review
 
 ## Usage
 - From main menu select one of the following options.
- - Track Calories.
- - Track Exercise.
- - Track Weight.
- - See Results.
+  - Track Calories.
+  - Track Exercise.
+  - Track Weight.
+  - See Results.
 
 ### Calorie Input Page
 - Select different date if applicable.
@@ -87,14 +87,14 @@ The application stores data in an excel file which can be opened for easy review
 
 ### Project Structure
 - **Forms**:
- - "HealthApp.cs": Main Menu Form.
- - "CaloriesInputPage": Calories Input Form.
- - "ExerciseInputPage": Exercise Input Form.
- - "WeightInputPage": Weight Input Form.
+  - "HealthApp.cs": Main Menu Form.
+  - "CaloriesInputPage": Calories Input Form.
+  - "ExerciseInputPage": Exercise Input Form.
+  - "WeightInputPage": Weight Input Form.
 
 - **Helpers**:
- - "ExcelManage.cs": Manages excel file creation, data writing to the different sheets, and opening up the file.
- - "ExerciseHelper.cs": Provides MET based calorie calculations for exercises and provides the list that the combo list uses in the exercise form.
+  - "ExcelManage.cs": Manages excel file creation, data writing to the different sheets, and opening up the file.
+  - "ExerciseHelper.cs": Provides MET based calorie calculations for exercises and provides the list that the combo list uses in the exercise form.
 
 ## Future Enhancements
 - Added graphical charts for reviewing trends in the data.
