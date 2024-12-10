@@ -45,11 +45,14 @@ The application stores data in an excel file which can be opened for easy review
 ---
 
 ## Installation
-1. **Download the Application**:
-- Downlaod the HealthTracker.exe file from the release folder.
+1. **Find the Installation Folder**
+Navigate to the Release portion of the Git Page
+
+1. **Download the ZIP File**:
+- Download the HealthTrackerApplication.zip file from the release folder.
 
 2. **Run the Application**:
-- Double click the exe file to launch the application.
+- Double click the exe file to install and launch the application.
 
 ## Usage
 - From main menu select one of the following options.
