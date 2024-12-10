@@ -33,19 +33,22 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exerciseMins = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.exerciseDate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.exerciseType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.exerciseWeight = new System.Windows.Forms.TextBox();
+            this.exerciseSaveBtn = new System.Windows.Forms.Button();
+            this.exerciseDateTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // calorieReturnToMenu
             // 
             this.calorieReturnToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calorieReturnToMenu.Location = new System.Drawing.Point(152, 217);
+            this.calorieReturnToMenu.Location = new System.Drawing.Point(155, 258);
             this.calorieReturnToMenu.Name = "calorieReturnToMenu";
             this.calorieReturnToMenu.Size = new System.Drawing.Size(165, 47);
             this.calorieReturnToMenu.TabIndex = 13;
@@ -70,7 +73,6 @@
             this.exerciseMins.Name = "exerciseMins";
             this.exerciseMins.Size = new System.Drawing.Size(121, 26);
             this.exerciseMins.TabIndex = 11;
-            this.exerciseMins.TextChanged += new System.EventHandler(this.exerciseMins_TextChanged);
             // 
             // label3
             // 
@@ -82,20 +84,11 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Exercise Type:";
             // 
-            // exerciseDate
-            // 
-            this.exerciseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exerciseDate.Location = new System.Drawing.Point(173, 64);
-            this.exerciseDate.Name = "exerciseDate";
-            this.exerciseDate.Size = new System.Drawing.Size(121, 26);
-            this.exerciseDate.TabIndex = 9;
-            this.exerciseDate.TextChanged += new System.EventHandler(this.exerciseDate_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 70);
+            this.label2.Location = new System.Drawing.Point(37, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 8;
@@ -116,7 +109,6 @@
             this.exerciseType.Name = "exerciseType";
             this.exerciseType.Size = new System.Drawing.Size(121, 28);
             this.exerciseType.TabIndex = 14;
-            this.exerciseType.SelectedIndexChanged += new System.EventHandler(this.exerciseType_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -127,7 +119,6 @@
             this.label4.Size = new System.Drawing.Size(142, 20);
             this.label4.TabIndex = 15;
             this.label4.Text = "Minutes Exercised:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -141,11 +132,52 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Input your Exercise";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(104, 223);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 20);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Weight:";
+            // 
+            // exerciseWeight
+            // 
+            this.exerciseWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exerciseWeight.Location = new System.Drawing.Point(173, 217);
+            this.exerciseWeight.Name = "exerciseWeight";
+            this.exerciseWeight.Size = new System.Drawing.Size(121, 26);
+            this.exerciseWeight.TabIndex = 19;
+            // 
+            // exerciseSaveBtn
+            // 
+            this.exerciseSaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exerciseSaveBtn.Location = new System.Drawing.Point(317, 196);
+            this.exerciseSaveBtn.Name = "exerciseSaveBtn";
+            this.exerciseSaveBtn.Size = new System.Drawing.Size(160, 47);
+            this.exerciseSaveBtn.TabIndex = 20;
+            this.exerciseSaveBtn.Text = "Save";
+            this.exerciseSaveBtn.UseVisualStyleBackColor = true;
+            this.exerciseSaveBtn.Click += new System.EventHandler(this.exerciseSaveBtn_Click);
+            // 
+            // exerciseDateTime
+            // 
+            this.exerciseDateTime.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exerciseDateTime.Location = new System.Drawing.Point(91, 70);
+            this.exerciseDateTime.Name = "exerciseDateTime";
+            this.exerciseDateTime.Size = new System.Drawing.Size(203, 20);
+            this.exerciseDateTime.TabIndex = 23;
+            // 
             // ExerciseInputPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 287);
+            this.ClientSize = new System.Drawing.Size(491, 317);
+            this.Controls.Add(this.exerciseDateTime);
+            this.Controls.Add(this.exerciseSaveBtn);
+            this.Controls.Add(this.exerciseWeight);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.exerciseType);
@@ -153,12 +185,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exerciseMins);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.exerciseDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ExerciseInputPage";
             this.Text = "ExerciseInputPage";
-            this.Load += new System.EventHandler(this.ExerciseInputPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,11 +201,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox exerciseMins;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox exerciseDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox exerciseType;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox exerciseWeight;
+        private System.Windows.Forms.Button exerciseSaveBtn;
+        private System.Windows.Forms.DateTimePicker exerciseDateTime;
     }
 }

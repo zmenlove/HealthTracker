@@ -45,6 +45,7 @@ namespace HealthTracker
         {
             try { excelManage.OpenExcelFile(); }
             catch (Exception ex) { MessageBox.Show(ex.Message, "Error: Couldn't open file", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            Application.Exit(); //application closed to prevent errors with entering data while excel file is open
         }
         
     }

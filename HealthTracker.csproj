@@ -91,6 +91,7 @@
     <Compile Include="Data\WeightRecord.cs" />
     <Compile Include="Data\WorkoutRecord.cs" />
     <Compile Include="ExcelManage.cs" />
+    <Compile Include="ExerciseHelper.cs" />
     <Compile Include="ExerciseInputPage.cs">
       <SubType>Form</SubType>
     </Compile>

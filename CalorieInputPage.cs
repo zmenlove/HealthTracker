@@ -17,20 +17,6 @@ namespace HealthTracker
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CalorieInputPage_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void calorieReturnToMenu_Click(object sender, EventArgs e)
         {

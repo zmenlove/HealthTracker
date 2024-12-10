@@ -11,8 +11,8 @@ namespace HealthTracker
 {
     public class ExcelManage
     {
-        private string filePath;
-        private string dataFolder;
+        private readonly string filePath;
+        private  readonly string dataFolder;
 
         public ExcelManage()
         {
