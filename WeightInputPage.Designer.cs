@@ -68,7 +68,6 @@
             this.weightTextBox.Name = "weightTextBox";
             this.weightTextBox.Size = new System.Drawing.Size(100, 26);
             this.weightTextBox.TabIndex = 11;
-            this.weightTextBox.TextChanged += new System.EventHandler(this.currentWeight_TextChanged);
             // 
             // label3
             // 

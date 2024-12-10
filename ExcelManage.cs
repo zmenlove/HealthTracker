@@ -1,6 +1,7 @@
 ﻿//Zachary Menlove
 //CIS262
-//Health Tracker Windows Form Project
+//Health Tracker Windows Form Application
+//12-9-2024
 //This class is a helper that generates an excel form if unavailable, sends data to, and opens the file.
 
 using System;
@@ -46,7 +47,7 @@ namespace HealthTracker
             }
         }
 
-        private void createExcelFile() //if folder is not in specified location then it will be created
+        private void createExcelFile() //if folder is not in specified location then it will be created with sheets
         {
             using (var package = new ExcelPackage(new FileInfo(filePath)))
             {
@@ -67,16 +68,17 @@ namespace HealthTracker
                 throw new FileNotFoundException("Excel File not found.");
             }
 
+            //writes the data to the excel file
             using (var package = new ExcelPackage(new FileInfo (filePath)))
             {
                 var worksheet = package.Workbook.Worksheets[sheetName] ?? package.Workbook.Worksheets.Add(sheetName);
 
-                int row = worksheet.Dimension?.Rows + 1 ?? 1;
+                int row = worksheet.Dimension?.Rows + 1 ?? 1; //writes data in consective rows
                 for (int i = 0; i < data.Length; i++)
                 {
                     worksheet.Cells[row, i +1].Value = data[i];
                 }
-                package.Save();
+                package.Save(); //saves file
             }
         }
         public void OpenExcelFile()
@@ -91,7 +93,7 @@ namespace HealthTracker
                         UseShellExecute = true //open the file using the default program for an excel filetype
                     });
                 }
-                catch (Exception ex)
+                catch (Exception ex) //lets user know if file isn't available. Shouldn't occur as file is always created when not available.
                 {
                     throw new Exception($"Failed to open Excel file: {ex.Message}");
                 }

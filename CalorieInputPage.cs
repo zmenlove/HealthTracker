@@ -1,6 +1,7 @@
 ﻿//Zachary Menlove
 //CIS262
-//Health Tracker Windows Form Project
+//Health Tracker Windows Form Application
+//12-9-2024
 
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ using System.Windows.Forms;
 
 namespace HealthTracker
 {
-    
+    //initializes excelManager instance to send data to excel file
     public partial class CalorieInputPage : Form
     {
         private readonly ExcelManage excelManage;
@@ -25,7 +26,7 @@ namespace HealthTracker
             excelManage = new ExcelManage();
         }
 
-
+        //sends user back to main page and closes current page
         private void calorieReturnToMenu_Click(object sender, EventArgs e)
         {
             HealthApp healthApp = new HealthApp();
@@ -33,6 +34,7 @@ namespace HealthTracker
             this.Hide();
         }
 
+        //sends the data to the excel file by taking the data in the date form and calories text box (ensuring it is number more than 0)
         private void calorieSaveBtn_Click(object sender, EventArgs e)
         {
             double caloriesEntered;

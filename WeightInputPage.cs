@@ -1,4 +1,9 @@
-﻿using OfficeOpenXml;
+﻿//Zachary Menlove
+//CIS262
+//Health Tracker Windows Form Application
+//12-9-2024
+
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +16,7 @@ using System.Windows.Forms;
 
 namespace HealthTracker
 {
+    //initializes excelmanage helper to store entered data to excel file
     public partial class WeightInputPage : Form
     {
         private readonly ExcelManage excelManage;
@@ -21,16 +27,7 @@ namespace HealthTracker
             excelManage = new ExcelManage();
         }
 
-        private void weightDate_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void currentWeight_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //button to return user to main page
         private void weightReturnToMenu_Click(object sender, EventArgs e)
         {
             HealthApp healthApp = new HealthApp();
@@ -38,6 +35,7 @@ namespace HealthTracker
             this.Hide();
         }
 
+        //method that takes the date entered and the weight entered (ensuring that weight is a number above zero). If not advises user.
         private void button1_Click(object sender, EventArgs e)
         {
             double weightEntered;

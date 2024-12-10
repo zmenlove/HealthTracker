@@ -1,7 +1,8 @@
 ﻿//Zachary Menlove
 //CIS262
-//Health Tracker Windows Form Project
-//This class is a helper that manages all the classes in the exercise form and then calculates calories burned
+//Health Tracker Windows Form Application
+//12-9-2024
+//This class is a helper that manages all the options in the in the exercise form combo list and then calculates calories burned
 
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace HealthTracker
 {
     internal class ExerciseHelper
     {
+        //dictionary list that has the data for the exercise combo list and the corresponding MET calculation number
         private readonly Dictionary<string, double> metValues = new Dictionary<string, double>
         {
             {"Running", 9.8 },
@@ -25,6 +27,8 @@ namespace HealthTracker
             { "Hiking", 7.4 }
         };
 
+        //calculates the amount of calories burned by taking the exercise type, entered weight of the user, and the minutes exercised
+        //converts pounds to Kg and then time to hours to return the calories burned (kilograms * MET * hours)
         public double CalculateCaloriesBurned(string exercise, double weightLbs, double minutes)
         {
             //convert pounds to kgs for standardization
@@ -36,6 +40,8 @@ namespace HealthTracker
 
             return met * weightKg * timeHours;
         }
+        
+        //attaches list to combo list
         public List<string> GetSupportedExercises()
         {
             return new List<string>(metValues.Keys);
