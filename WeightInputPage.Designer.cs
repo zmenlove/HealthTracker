@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeightInputPage));
             this.weightReturnToMenu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.currentWeight = new System.Windows.Forms.TextBox();
+            this.weightTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,14 +61,14 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // currentWeight
+            // weightTextBox
             // 
-            this.currentWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentWeight.Location = new System.Drawing.Point(168, 114);
-            this.currentWeight.Name = "currentWeight";
-            this.currentWeight.Size = new System.Drawing.Size(100, 26);
-            this.currentWeight.TabIndex = 11;
-            this.currentWeight.TextChanged += new System.EventHandler(this.currentWeight_TextChanged);
+            this.weightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weightTextBox.Location = new System.Drawing.Point(168, 114);
+            this.weightTextBox.Name = "weightTextBox";
+            this.weightTextBox.Size = new System.Drawing.Size(100, 26);
+            this.weightTextBox.TabIndex = 11;
+            this.weightTextBox.TextChanged += new System.EventHandler(this.currentWeight_TextChanged);
             // 
             // label3
             // 
@@ -110,6 +110,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // weightDateTime
             // 
@@ -128,7 +129,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.weightReturnToMenu);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.currentWeight);
+            this.Controls.Add(this.weightTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -146,7 +147,7 @@
 
         private System.Windows.Forms.Button weightReturnToMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox currentWeight;
+        private System.Windows.Forms.TextBox weightTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

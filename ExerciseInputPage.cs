@@ -37,6 +37,7 @@ namespace HealthTracker
             string selectedExercise = exerciseType.SelectedItem.ToString();
             double durationMinutes;
             double weightLbs;
+            DateTime selectedDateTime = exerciseDateTime.Value;
 
             if (!double.TryParse(exerciseMins.Text, out durationMinutes) || durationMinutes <= 0)
             {
@@ -53,7 +54,13 @@ namespace HealthTracker
             double caloriesBurned = exerciseHelper.CalculateCaloriesBurned(selectedExercise, weightLbs, durationMinutes);
 
             //send data to excel
-            string[] data = { DateTime.Now.ToString("yyyy-MM-dd"), selectedExercise, durationMinutes.ToString(), caloriesBurned.ToString("F2") };
+            string[] data = 
+            { 
+                selectedDateTime.ToString("yyyy-MM-dd"),
+                selectedExercise,
+                durationMinutes.ToString(),
+                caloriesBurned.ToString("F2") 
+            };
             excelManage.AddToSheet("Exercise", data);
 
             //display calories burned and return to main page

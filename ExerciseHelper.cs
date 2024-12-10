@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Zachary Menlove
+//CIS262
+//Health Tracker Windows Form Project
+//This class is a helper that manages all the classes in the exercise form and then calculates calories burned
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,11 +1,16 @@
-﻿using System;
+﻿//Zachary Menlove
+//CIS262
+//Health Tracker Windows Form Project
+//This class is a helper that generates an excel form if unavailable, sends data to, and opens the file.
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OfficeOpenXml;
+using OfficeOpenXml; //package used to asssist with excel files
 
 namespace HealthTracker
 {
@@ -23,7 +28,7 @@ namespace HealthTracker
             dataFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
             filePath = Path.Combine(dataFolder, "HealthData.xlsx");
 
-            //verifies folder is available
+            //verifies folder is in location
             ensureDataFileAndFolder();
         }
 
@@ -40,11 +45,12 @@ namespace HealthTracker
                 createExcelFile();
             }
         }
-        private void createExcelFile()
+
+        private void createExcelFile() //if folder is not in specified location then it will be created
         {
             using (var package = new ExcelPackage(new FileInfo(filePath)))
             {
-                //create sheets
+                //create individual sheets
                 package.Workbook.Worksheets.Add("Calories");
                 package.Workbook.Worksheets.Add("Weight");
                 package.Workbook.Worksheets.Add("Exercise");
